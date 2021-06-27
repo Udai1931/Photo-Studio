@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Studio</title>
+    <link rel="icon" href="https://img.icons8.com/material/24/ffffff/paint--v1.png" type="image/gif" sizes="16x16">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Flat-HTML5-Palette-Color-Picker-For-jQuery-colorPick-js/src/colorPick.css">
+    <link rel="stylesheet" href="./perfect-scrollbar-1.4.0/css/perfect-scrollbar.css" />
+    <script src="./perfect-scrollbar-1.4.0/dist/perfect-scrollbar.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="top-panel">
+            <div class="upload-button">Upload a photo</div>
+            <div class="url-button">Image URL</div>
+            <div class="url-modal">
+                <input type="text">
+                <button class="url-modal-button">Add</button>
+            </div>
+        </div> -->
+        <div class="left-panel">
+            <div class="options add-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/add-image.png"/>Image</div>
+            <div class="options brush-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/paint.png"/>Brush</div>
+            <!-- <div class="options brush-button">Edit Brush</div> -->
+            <div class="options eraser-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/eraser.png"/>Eraser</div>
+            <!-- <div class="options crop-button">Crop</div> -->
+            <div class="options emoji-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/crazy.png"/>Emojis</div>
+            <!-- <div class="options round-button">Borders</div> -->
+            <div class="options text-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/add-text.png"/>Text</div>
+            <div class="options text-edit-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/text.png"/>Edit</div>
+            <div class="options round-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/image.png"/>Round</div>
+            <div class="options effects-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/visual-effects.png"/>Effects</div> 
+            <!-- <div class="options add-button">Reset</div> -->
+        </div> 
+        <!-- <div class="font-modal">
+            <select class="menu-selector" id="font-family">
+                <option style="font-family:Noto Sans" value="Noto Sans">Noto Sans</option>
+                <option style="font-family:Arial" value="Arial">Arial</option>
+                <option style="font-family:Calibri" value="Calibri">Calibri</option>
+                <option style="font-family:Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+                <option style="font-family:Courier New" value="Courier New">Courier New</option>
+                <option style="font-family:Impact" value="Impact">Impact</option>
+                <option style="font-family:Georgia" value="Georgia">Georgia</option>
+                <option style="font-family:Garamond" value="Garamond">Garamond</option>
+                <option style="font-family:Lato" value="Lato">Lato</option>
+                <option style="font-family:Open Sans" value="Open Sans">Open Sans</option>
+                <option style="font-family:Palatino" value="Palatino">Palatino</option>
+                <option style="font-family:Verdana" value="Verdana">Verdana</option>
+            </select>
+        </div> -->
+        <!-- <div class="text-modal">
+            <div class="options2  bgcolor">BackGround color</div>
+            <div class="options2 fontcolor">Font color</div>
+            <div class="options2 fontstyle">Font style</div>
+            <div class="options2 bold">Bold</div>
+            <div class="options2 underline">UnderLine</div>
+            <div class="options2 italic">Italic</div>
+            <div class="options2 fontsizeup">Font-size up</div>
+            <div class="options2 fontsizedown">Font-size down</div>
+            <div class="options2 alignment">Alignment</div>
+        </div> -->
+        <!-- <div class="round-modal">
+            <label for="customRange3" class="form-label">Blur</label>
+            <input type="range" class="form-range slider" min="0px" max="1px" step="0.01px" value="0px" id="customRange3" filter="blur">
+        </div> -->
+        <!-- <div class="effects-container">
+            <button style="display: block;">Reset</button>
+            <label for="customRange3" class="form-label">Blur</label>
+            <input type="range" class="form-range slider" min="0px" max="1px" step="0.01px" value="0px" id="customRange3" filter="blur">
+            <label for="customRange3" class="form-label">Brightness</label>
+            <input type="range" class="form-range slider" min="0%" max="200%" step="2%" value="100%" id="customRange3" filter="brightness">
+            <label for="customRange3" class="form-label">Contrast</label>
+            <input type="range" class="form-range slider" min="0%" max="200%" step="2%" value="100%" id="customRange3" filter="contrast">
+            <label for="customRange3" class="form-label">Grayscale</label>
+            <input type="range" class="form-range slider" min="0%" max="100%" step="1%" value="0%" id="customRange3" filter="grayscale">
+            <label for="customRange3" class="form-label">Hue</label>
+            <input type="range" class="form-range slider" min="0deg" max="360deg" step="10deg" value="0deg" id="customRange3" filter="hue">
+            <label for="customRange3" class="form-label">Saturate</label>
+            <input type="range" class="form-range slider" min="0%" max="200%" step="2%" value="100%" id="customRange3" filter="saturate">
+            <label for="customRange3" class="form-label">Sepia</label>
+            <input type="range" class="form-range slider" min="0%" max="100%" step="1%" value="0%" id="customRange3" filter="sepia">
+        </div> --> 
+        <div class="right-panel">
+            <div class="options delete-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/delete-forever.png"/>Item</div>
+            <div class="options save-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/save.png"/>Save</div>
+            <!-- <div class="options add-button">Share</div> -->
+            <div class="options download-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/download--v1.png"/>Download</div>
+            <div class="options gallery-button"><img src="https://img.icons8.com/material-outlined/24/ffffff/stack-of-photos--v1.png"/>Gallery</div>
+        </div>
+        <div class="center">
+            <canvas></canvas>
+        </div>
+    </div>
+    <script src="./dbScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Flat-HTML5-Palette-Color-Picker-For-jQuery-colorPick-js/src/colorPick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+    <script>
+        let uid = new ShortUniqueId();
+    </script>
+    <script src="./html2canvas.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

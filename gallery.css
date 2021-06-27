@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    background-color: gray;
+}
+
+.head{
+    height: 80px;
+    background-color: #4c5152;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    background-color: #e5e0db;
+    background-image: gray;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.media-card{
+    height: 25rem;
+    width: 22rem;
+    margin-top: 20px;
+    /* border: 1px solid; */
+    /* border-radius: 50%; */
+}
+
+.media-container{
+    height: 80%;
+    width: 100%;
+}
+
+.action-container{
+    height: 20%;
+    width: 100%;
+    /* border: 1px solid; */
+}
+
+.action-container button{
+    width: 100%;
+    height: 50%;
+    font-size: 1.5rem;
+}
+
+.media-gallery{
+    height: 100%;
+    width: 100%;
+}
+
+.media-download {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+  
+.media-delete {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.media-download:hover,.media-delete:hover{
+    color: #3498db;
+    background-color: white;
+    border: 3px solid #3498db;
+}
+
+#back{
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    bottom: 5rem;
+    right: 2rem;
+    cursor: pointer;
+}
